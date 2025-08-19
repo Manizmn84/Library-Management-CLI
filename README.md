@@ -15,6 +15,7 @@ A simple, terminal-based Library Management System built with Python using Objec
 ---
 
 ## Project Structure
+```sh
 library_project/
 │
 ├── main.py         # Main script to run the application and display the menu.
@@ -22,6 +23,7 @@ library_project/
 ├── database.py     # Handles all database connections and CRUD operations.
 ├── controller.py   # Contains the core application logic.
 └── README.md       # Project documentation.
+```
 
 ---
 
@@ -29,7 +31,7 @@ library_project/
 
 1.  **Clone the repository:**
     ```sh
-    git clone <your-repository-link>
+    git clone <https://github.com/Manizmn84/Library-Management-CLI.git>
     cd library_project
     ```
 
