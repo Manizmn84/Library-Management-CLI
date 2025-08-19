@@ -82,3 +82,32 @@ class Book:
 
     def __str__(self):
         return f"Book(ID : {self.id} , Title : {self.title} , Isbn : {self.isbn} , Author_id : {self.author_id} , Is_borrowed : {self.is_borrowed})"
+    
+class Member:
+    def __init__(self , id : int | None = None , name : str , membership_id : str):
+        self.id = id
+        self.name = name
+        self.membership_id = membership_id
+    
+    @property
+    def name(self) -> str :
+        return self._name
+    
+    @name.setter
+    def name(self , name) :
+        if not isinstance(name  , str) :
+            raise ValueError("The Type of Name is Invalid")
+        self._name = name
+    
+    @property
+    def membership_id(self) -> str :
+        return self._membership_id
+    
+    @membership_id.setter
+    def membership_id(self , id) :
+        if not isinstance(id , str) : 
+            raise ValueError("The Id Type is Invalid")
+        self._membership_id = id
+
+    def __str__(self):
+        return f"Member(ID : {self.id} , Name : {self.name} , Membership_id : {self.membership_id})"
