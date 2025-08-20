@@ -43,3 +43,23 @@ class LibraryController:
         membership_id = input("Enter Membership Id : ")
         
         database.add_member(name=name , membership_id=membership_id)
+
+    def display_all_authors(self) -> None :
+        List_author = database.get_all_authors()
+        if not List_author :
+            print("The Library Don`t have any Author.")
+            return
+
+        print("\n\t======= List Author =======\t")
+        for author in List_author :
+            print(author)
+
+    def display_all_books(self) -> None :
+        List_book = database.get_all_books()
+        if not List_book :
+            print("The Library Don`t have any Book.")
+            return
+
+        print("\n\t======= List Book =======\t")
+        for book in List_book :
+            print(book)
