@@ -3,6 +3,11 @@ from sqlalchemy import create_engine, ForeignKey, String
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship, validates
 from typing import List
 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_path = os.path.join(BASE_DIR, "library.db")
+engine = create_engine(f"sqlite:///{db_path}")
+
 class Base(DeclarativeBase):
     pass
 
